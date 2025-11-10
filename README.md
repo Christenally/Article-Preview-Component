@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: (https://github.com/Christenally/Article-Preview-Component)
 - Live Site URL: (https://christenally.github.io/Article-Preview-Component)
 
 ## My process
