@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Article Preview Component</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="social-popup hidden">
+        <h2>share</h2>
+        <img src="/images/icon-facebook.svg" alt="" />
+        <img src="/images/icon-twitter.svg" alt="" />
+        <img src="/images/icon-pinterest.svg" alt="" />
+      </div>
+      <div class="card-top">
+        <img src="/images/drawers.jpg" alt="image of drawers" />
+      </div>
+
+      <div class="card-bottom">
+        <h1>
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home.
+        </h1>
+        <p class="card-info">
+          Ever been in a room and flet like <br />
+          something was missing? Perhaps it felt slightly bare and uninviting.
+          I've got some simple tips to help you make any room feel complete.
+        </p>
+
+        <div class="card-bottom-avatar hidden" id="">
+          <div class="avatar-info">
+            <img
+              src="/images/avatar-michelle.jpg"
+              class="avatar"
+              alt="avatar"
+            />
+            <div class="avatar-text">
+              <h2>Michelle Appleton</h2>
+              <p>28 Jun 2020</p>
+            </div>
+          </div>
+
+          <div class="footer-icon-wrapper">
+            <img
+              src="/images/icon-share.svg"
+              class="share-icon"
+              alt="share icon"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <!-- UNCLICKED FOOTER -->
+        <div class="unclicked" id="">
+          <img src="/images/avatar-michelle.jpg" class="avatar" alt="avatar" />
+
+          <div class="avatar-info">
+            <h2>Michelle Appleton</h2>
+            <p>28 Jun 2020</p>
+          </div>
+
+          <div class="footer-icon-wrapper">
+            <img
+              src="/images/icon-share.svg"
+              class="share-icon"
+              alt="share icon"
+            />
+          </div>
+        </div>
+
+        <div class="clicked hidden">
+          <div class="social-links">
+            <h2>share</h2>
+            <img src="/images/icon-facebook.svg" alt="" />
+            <img src="/images/icon-twitter.svg" alt="" />
+            <img src="/images/icon-pinterest.svg" alt="" />
+          </div>
+
+          <div class="footer-icon-wrapper">
+            <img
+              src="/images/icon-share.svg"
+              class="share-icon"
+              alt="share icon"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

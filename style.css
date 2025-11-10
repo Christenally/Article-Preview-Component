@@ -1,0 +1,343 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+:root {
+  --darkGrayishBlue: hsl(217, 19%, 35%);
+  --darkBlue: hsl(214, 17%, 51%);
+  --grayishBlue: hsl(212, 23%, 69%);
+  --lightGrayishBlue: hsl(210, 46%, 95%);
+
+  --fs13: 13px;
+  --fw500: 500;
+  --fw700: 700;
+
+  --ffamily: "Manrope", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-width: 100%;
+  background-color: var(--grayishBlue);
+  font-family: var(--ffamily);
+  font-size: var(--fs13);
+
+  /* padding: calc(3rem); */
+}
+
+.card {
+  max-width: 90%;
+  min-height: min-content;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 220px auto;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  /* background-color: var(--lightGrayishBlue); */
+  background-color: white;
+}
+
+.card-top img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+}
+.card-bottom {
+  /* padding: 30px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 31px;
+  padding-bottom: 20px;
+
+  position: relative;
+  flex: 1;
+}
+
+.card-bottom h1 {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: var(--fw700);
+  color: var(--darkGrayishBlue);
+}
+
+.card-bottom p {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  font-weight: var(--fw500);
+  color: var(--grayishBlue);
+  min-width: 0;
+}
+
+.card-bottom-avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-bottom-avatar .avatar {
+  max-width: 45px;
+  max-height: 45px;
+  border-radius: 50%;
+}
+
+.footer {
+  min-width: 100%;
+  padding-left: 31px;
+  padding-right: 31px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  /* display: flex;
+
+  gap: 1rem;
+
+  align-items: center; */
+  position: relative;
+}
+
+.footer .unclicked,
+.footer .clicked {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* this fixed the weird jumping issue on press */
+.footer .clicked {
+  padding-top: 10px;
+}
+
+.footer .clicked h2 {
+  color: var(--grayishBlue);
+}
+
+/* .footer .clicked {
+  border: 1px solid green;
+} */
+
+.footer > * {
+  flex: 1;
+}
+
+.footer .avatar {
+  max-width: 45px;
+  max-height: 45px;
+  border-radius: 50%;
+}
+
+/* .footer .avatar-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.1rem;
+} */
+
+.footer h2 {
+  font-size: 0.9rem;
+  color: var(--darkGrayishBlue);
+  font-weight: var(--fw700);
+}
+
+.footer-icon-wrapper {
+  padding: 0.5rem;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: fit-content;
+  background-color: var(--lightGrayishBlue);
+  border-radius: 50%;
+}
+
+.footer .share-icon {
+  min-width: 15px;
+  min-height: 15px;
+
+  position: relative;
+}
+
+.footer-share {
+  background-color: var(--darkBlue);
+}
+
+.card-info {
+  line-height: 1.2;
+}
+
+.mobile-active-share {
+  width: 100%;
+  min-height: 60px;
+  position: absolute;
+  bottom: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+/* UTILITIES */
+
+#hidden {
+  display: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.red-background {
+  background-color: red;
+}
+
+@media (width > 400px) {
+  body {
+    padding: 2rem;
+  }
+  .card {
+    max-width: 670px;
+    /* min-height: min-content; */
+
+    display: flex;
+    flex: 1;
+
+    border-radius: 8px;
+    overflow: hidden;
+
+    /* background-color: var(--lightGrayishBlue); */
+    background-color: white;
+    position: relative;
+  }
+
+  .card-top {
+    max-width: 40%;
+  }
+
+  .card-bottom {
+    /* padding: 30px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    padding: 31px;
+
+    position: relative;
+    /* flex-wrap: wrap; */
+  }
+
+  .card-bottom h1 {
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: var(--fw700);
+    color: var(--darkGrayishBlue);
+  }
+
+  .card-bottom p {
+    font-size: 0.6rem;
+    line-height: 1.7;
+    font-weight: var(--fw500);
+    color: var(--grayishBlue);
+  }
+
+  .card-bottom br {
+    display: none;
+  }
+
+  .card-bottom-avatar {
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  .social-popup {
+    position: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1;
+    padding: 0.7rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+
+    border-radius: 8px;
+
+    background-color: var(--darkGrayishBlue);
+  }
+
+  .social-popup h2 {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw500);
+    color: var(--grayishBlue);
+  }
+
+  .social-popup img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .card-bottom-avatar h2 {
+    font-size: 0.7rem;
+    color: var(--darkGrayishBlue);
+  }
+
+  .card-bottom-avatar p {
+    font-size: 0.7rem;
+  }
+
+  .card-bottom-avatar .avatar-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .card-bottom-avatar .avatar-text {
+    align-self: center;
+  }
+
+  .card-bottom-avatar .avatar {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+/* NOTES */
+/* .card-left {
+  display: grid;
+  place-content: center;
+  flex-direction: column;
+  grid-template-columns: min(70%, 500px);
+  grid-template-rows: 250px minmax(100px, min(calc(8vw + 1rem), 200px));
+  flex-wrap: wrap;
+} */
